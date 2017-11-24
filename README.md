@@ -13,15 +13,14 @@ compile 'com.milaptank:stv:1.0.0'
 ## What can I do with SpannableTextView?
 Examples of different styles. Each one is a **single** TextView.
 
-<img src=https://raw.githubusercontent.com/milaptank/SpannableTextView/master/resources/device-2017-11-23-180045.png width=360 height=640 />
-<img src=https://raw.githubusercontent.com/milaptank/SpannableTextView/master/resources/device-2017-11-23-180122.png width=360 height=640 />
+<img src=https://raw.githubusercontent.com/milaptank/SpannableTextView/master/resources/device-2017-11-23-180045.png width=360 height=640 /><img src=https://raw.githubusercontent.com/milaptank/SpannableTextView/master/resources/device-2017-11-23-180122.png width=360 height=640 />
 
 
 Example
 --------
 Generate the following style:
 
- <img src=https://raw.githubusercontent.com/milaptank/SpannableTextView/master/resources/device-2017-11-23-18012222.png/>
+<img src=https://raw.githubusercontent.com/milaptank/SpannableTextView/master/resources/device-2017-11-23-18012222.png width=320 height=90/>
 
 With the code below:
 
@@ -74,30 +73,8 @@ slice.setText("6/10");
 // you must always call display after you alter a Slice's text
 stvMarksDown.display();
 ```
-### License
-```
-MIT License
 
-Copyright (c) 2017 milap tank
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
 ### Contributing to SpannableTextView
 All pull requests are welcome, make sure to follow the [contribution guidelines](CONTRIBUTING.md)
 when you submit pull request.
