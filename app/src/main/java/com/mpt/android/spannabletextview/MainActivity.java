@@ -116,7 +116,6 @@ public class MainActivity extends AppCompatActivity implements OnTextClick {
                         .textSize(40)
                         .build());
 
-
         stvImageSpan.display();
     }
 

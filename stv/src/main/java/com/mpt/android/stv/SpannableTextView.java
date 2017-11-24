@@ -28,9 +28,9 @@ import java.util.List;
 
 /**
  * @author Milap Tank
- * @Email milaptank@gmail.com
- * @Project SpannableTextView - Android
- * @desc SpannableTextView.java  is for extra power to #TextView
+ * Email milaptank@gmail.com
+ * Project SpannableTextView - Android
+ * desc SpannableTextView.java  is for extra power to #TextView
  * @since 23/11/17  3:48 PM
  */
 
@@ -253,6 +253,7 @@ public class SpannableTextView extends AppCompatTextView {
 
     /**
      * Change text color of all pieces of textview.
+     * @param textColor
      */
     public void changeTextColor(int textColor) {
         for (Slice slice : sliceList) {

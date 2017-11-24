@@ -1,13 +1,15 @@
 apply plugin: 'com.android.library'
 apply plugin: "com.jfrog.bintray"
 apply plugin: 'com.github.dcendents.android-maven'
+
+version = "1.0.0"
 android {
     compileSdkVersion 26
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName version
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
@@ -29,23 +31,16 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     def siteUrl = 'https://github.com/milaptank/SpannableTextView'
-    // Homepage URL of the library
     def gitUrl = 'https://github.com/milaptank/SpannableTextView.git'   // Git repository URL
     group = "com.milaptank"
-
     install {
         repositories.mavenInstaller {
-            // This generates POM.xml with proper parameters
             pom {
                 project {
                     packaging 'aar'
-
-                    // Add your description here
                     name 'com.milaptank:spannabletextview'
                     description = 'Super Power to TextView'
                     url siteUrl
-
-                    // Set your license
                     licenses {
                         license {
                             name 'MIT License'
@@ -91,18 +86,23 @@ dependencies {
     bintray {
         user = properties.getProperty("bintray.user")
         key = properties.getProperty("bintray.apikey")
-
         configurations = ['archives']
+
         pkg {
-            repo = "maven"
+            repo = "SpannableTextView"
             // it is the name that appears in bintray when logged
             name = "com.milaptank:spannabletextview"
+            issueTrackerUrl = 'https://github.com/milaptank/SpannableTextView/issues'
             websiteUrl = siteUrl
             vcsUrl = gitUrl
+            publicDownloadNumbers = true
             licenses = ["MIT"]
             publish = true
             version {
-
+                name = '1.0.0'
+                desc = 'Super Power to TextView'
+                released  = new Date()
+                vcsTag = '1.0.0'
             }
         }
     }
