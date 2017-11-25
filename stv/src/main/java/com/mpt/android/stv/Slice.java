@@ -23,7 +23,9 @@ public class Slice {
     public static int DEFAULT_ABSOLUTE_TEXT_SIZE;
     public static float DEFAULT_RELATIVE_TEXT_SIZE = 1;
     private final boolean isRounded;
+    private final boolean isCircle;
     private int cornerRadius;
+    private int circleRadius;
 
 
     public Slice(Builder builder) {
@@ -41,15 +43,25 @@ public class Slice {
         this.sliceId = builder.sliceId;
         this.imageResource = Builder.imageResource;
         this.isRounded = builder.isRounded;
+        this.isCircle = builder.isCircle;
         this.cornerRadius = builder.cornerRadius;
+        this.circleRadius = builder.circleRadius;
     }
 
     public boolean isRounded() {
         return isRounded;
     }
 
+    public boolean isCircle() {
+        return isCircle;
+    }
+
     public int getCornerRadius() {
         return cornerRadius;
+    }
+
+    public int getCircleRadius() {
+        return circleRadius;
     }
 
 
@@ -73,7 +85,9 @@ public class Slice {
         private OnTextClick onTextClick;
         private int sliceId;
         private boolean isRounded;
+        private boolean isCircle;
         private int cornerRadius;
+        private int circleRadius;
 
         /**
          * Creates a new Builder for this Piece.
@@ -228,6 +242,12 @@ public class Slice {
          */
         public Slice build() {
             return new Slice(this);
+        }
+
+        public Builder setCircleRadius(int circleRadius) {
+            this.circleRadius = circleRadius;
+            this.isCircle = true;
+            return this;
         }
     }
 

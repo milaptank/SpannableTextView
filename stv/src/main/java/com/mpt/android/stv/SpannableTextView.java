@@ -21,6 +21,7 @@ import android.text.style.UnderlineSpan;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.mpt.android.stv.span.CircleBackgroundSpan;
 import com.mpt.android.stv.span.RoundedBackgroundSpan;
 
 import java.util.ArrayList;
@@ -212,6 +213,9 @@ public class SpannableTextView extends AppCompatTextView {
             finalString.setSpan(new RoundedBackgroundSpan(slice.getBackgroundColor(), slice.getTextColor(),
                     slice.getCornerRadius()), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
+        if(slice.isCircle())
+            finalString.setSpan(new CircleBackgroundSpan(slice.getBackgroundColor(), slice.getTextColor(),
+                    slice.getCircleRadius()), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         //https://stackoverflow.com/a/33336650/1293313 for rounded corner
         //url span
 
