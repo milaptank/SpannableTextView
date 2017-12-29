@@ -29,9 +29,9 @@ import java.util.List;
 
 /**
  * @author Milap Tank
- * Email milaptank@gmail.com
- * Project SpannableTextView - Android
- * desc SpannableTextView.java  is for extra power to #TextView
+ *         Email milaptank@gmail.com
+ *         Project SpannableTextView - Android
+ *         desc SpannableTextView.java  is for extra power to #TextView
  * @since 23/11/17  3:48 PM
  */
 
@@ -213,7 +213,7 @@ public class SpannableTextView extends AppCompatTextView {
             finalString.setSpan(new RoundedBackgroundSpan(slice.getBackgroundColor(), slice.getTextColor(),
                     slice.getCornerRadius()), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-        if(slice.isCircle())
+        if (slice.isCircle())
             finalString.setSpan(new CircleBackgroundSpan(slice.getBackgroundColor(), slice.getTextColor(),
                     slice.getCircleRadius()), start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         //https://stackoverflow.com/a/33336650/1293313 for rounded corner
@@ -243,8 +243,14 @@ public class SpannableTextView extends AppCompatTextView {
             finalString.setSpan(new BackgroundColorSpan(slice.getBackgroundColor()), start, end,
                     Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         }
+    }
 
+    public void removeAllSlice() {
 
+        if (sliceList.size() > 0)
+            for (int i = 0; i <= sliceList.size(); i++) {
+                removeSlice(0);
+            }
     }
 
     /**
@@ -257,6 +263,7 @@ public class SpannableTextView extends AppCompatTextView {
 
     /**
      * Change text color of all pieces of textview.
+     *
      * @param textColor
      */
     public void changeTextColor(int textColor) {
